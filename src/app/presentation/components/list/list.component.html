@@ -1,0 +1,23 @@
+
+<div class="list">
+    <div class="list__action-container">
+        <div class="list__button-container">
+            <app-base-button (action)="addNote()" [text]="' + New Note'"></app-base-button>
+        </div>
+        <div class="list__search-container">
+            <input class="list__search-bar" type="text" placeholder="Filter Notes" [(ngModel)]="search"/>
+        </div>
+    </div>
+    <div *ngIf="notes">
+        <div *ngFor="let item of notes" class="list__note">
+            <div  class="list__item" *ngIf="filtering(item)" (click)="selectItem(item)">
+                <span class="list__title">{{ item.title }}</span>
+                <span class="list__date">{{ item.update }}</span>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="notes?.length === 0">
+        <div class="list__empty-message">there are no notes :( </div>
+    </div>
+</div>
+

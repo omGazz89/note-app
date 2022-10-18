@@ -1,0 +1,14 @@
+<div class="form">
+    <div class="form__header">
+        <span class="form__update">modification date: {{ note.update }}</span>
+        <span class="form__save-container">
+            <app-base-button (action)="addNote()" [text]="'Save'"></app-base-button>
+        </span>
+    </div>
+    <div class="form__input-container">
+        <input placeholder="New Note" class="form__title" type="text" [(ngModel)]="note.title">
+        <textarea class="form__content" [(ngModel)]="note.content"></textarea>
+        <!-- L'error message va gestito a livello globale nnell'app component per non duplicare il codice -->
+        <span class="global__error" *ngIf="error.isVisible">{{ error.message }}</span>
+    </div>
+</div>

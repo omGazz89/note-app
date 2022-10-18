@@ -1,0 +1,10 @@
+<div class="home">
+    <div class="home__sidebar">
+        <app-list></app-list>
+    </div>
+    <div class="home__form">
+            <app-form *ngIf="showCreate && !init"></app-form>
+            <app-form-edit *ngIf="showEdit && !init"></app-form-edit>
+    </div>
+</div>
+

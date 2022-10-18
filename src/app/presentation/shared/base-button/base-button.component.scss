@@ -1,0 +1,15 @@
+.base-button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #D7192F;
+    border: 1px solid #D7192F;
+    transition: 200ms;
+    padding:  8px 15px;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.7);
+
+    &:hover {
+        color: #D7192F;
+        background-color: #fff;
+        border: 1px solid #D7192F;
+    }
+}

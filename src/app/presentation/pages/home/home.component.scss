@@ -1,0 +1,22 @@
+// ho utilizzato BEM come protocollo per scrivere scss. Personalmente mi ci trovo bene ma ne potevo
+// utilizzare sicuramente altri
+
+.home {
+    height: 100%;
+    
+    &__sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 400px;
+    padding: 10px 25px;
+        background-color: #F5F5F5;
+    }
+
+    &__form {
+        position: fixed;
+        left: 450px;
+        right: 0;
+    }
+}

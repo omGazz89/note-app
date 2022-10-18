@@ -1,0 +1,17 @@
+<div class="form">
+    <div class="form__header">
+    <span class="form__update" *ngIf="selectedNote">modification date: {{ selectedNote.update }}</span>
+
+    <span class="form__button-container">
+        <app-base-button (action)="save()" [text]="'Save'"></app-base-button>
+        <app-base-button (action)="delete()" [text]="'Delete'"></app-base-button>
+    </span>
+
+    </div>
+    <div class="form__input-container" *ngIf="selectedNote">
+        <input placeholder="New Note" class="form__title" type="text" [(ngModel)]="selectedNote.title">
+        <textarea class="form__content" type="text" [(ngModel)]="selectedNote.content"></textarea>
+        <!-- L'error message va gestito a livello globale nnell'app component per non duplicare il codice -->
+        <span class="global__error" *ngIf="error.isVisible">{{ error.message }}</span>
+    </div>
+</div>

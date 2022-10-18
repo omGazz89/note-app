@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+input, textarea {
+    outline: none;
+}
+
+.global__error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px 25px;
+    background-color: red;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 600;
+}
